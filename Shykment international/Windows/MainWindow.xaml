@@ -1,0 +1,28 @@
+﻿<Window x:Class="Shykment_international.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shykment_international"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="850" MinHeight="500" MinWidth="850">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Background="#3e4f76">
+            <Button Name="btnTableDepartures" Content="Вылеты" FontSize="14" Padding="8" Background="Transparent" BorderThickness="0" Foreground="#FFFFFF" Click="btnTableDepartures_Click"></Button>
+            <Button Name="btnTableArrivals" Content="Прилеты" FontSize="14" Padding="8" Background="Transparent" BorderThickness="0" Foreground="#FFFFFF" Click="btnTableArrivals_Click"></Button>
+            <Button Name="btnControlRoom" Content="Диспетчерская" FontSize="14" Padding="8" Background="Transparent" BorderThickness="0" Foreground="#FFFFFF" Click="btnControlRoom_Click"></Button>
+            <Button Name="btnAdministratorRoom" Content="Администратор" FontSize="14" Padding="8" Background="Transparent" BorderThickness="0" Foreground="#FFFFFF"></Button>
+            <Button Name="btnSchedules" Content="Графики" FontSize="14" Padding="8" Background="Transparent" BorderThickness="0" Foreground="#FFFFFF"></Button>
+        </StackPanel>
+        <Image Name="imgLogo" Source="/Images/LOGO.png"></Image>
+        <Frame Name="frameMain" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden" Background="#5a6a8e"></Frame>
+    </Grid>
+</Window>

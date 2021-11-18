@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="deb423daf21e4f079886c6ee7003ea4a" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Administators" Width="1.5" PointX="5.75" PointY="1.875" />
+        <EntityTypeShape EntityType="Model.Airlines" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.Arrivals" Width="1.5" PointX="6" PointY="4.375" />
+        <EntityTypeShape EntityType="Model.Cities" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.Departures" Width="1.5" PointX="3" PointY="3.875" />
+        <EntityTypeShape EntityType="Model.Dispatcher" Width="1.5" PointX="5.75" PointY="7.875" />
+        <EntityTypeShape EntityType="Model.Status" Width="1.5" PointX="7.75" PointY="1.875" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.875" />
+        <AssociationConnector Association="Model.FK_Arrivals_Airlines" />
+        <AssociationConnector Association="Model.FK_Departures_Airlines" />
+        <AssociationConnector Association="Model.FK_Arrivals_Cities" />
+        <AssociationConnector Association="Model.FK_Departures_Cities" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

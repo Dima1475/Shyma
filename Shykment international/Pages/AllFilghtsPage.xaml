@@ -1,0 +1,42 @@
+﻿<Page x:Class="Shykment_international.AllFilghtsPage" Background="#5a6a8e"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Shykment_international"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AllFilghtsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Name="saveChanges" Content="Сохрнаить изменения" FontSize="15" Padding="8" Background="Transparent" HorizontalAlignment="Left" BorderThickness="0" Foreground="White" Height="36" VerticalAlignment="Top" Click="saveChanges_Click"></Button>
+        <DataGrid Name="datagridAllFlights" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="НОМЕР" Binding="{Binding Number}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Airlines.Name}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock TextAlignment="Center"><Run>Авиа</Run><LineBreak></LineBreak><Run>компания</Run></TextBlock>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="ОТКУДА" Binding="{Binding Cities.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="ВЫЛЕТ" Binding="{Binding Departure}"></DataGridTextColumn>
+                <DataGridTextColumn Header="ПРИЛЕТ" Binding="{Binding Arrival}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding StartRegister}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock TextAlignment="Center"><Run>Начало</Run><LineBreak></LineBreak><Run>регистрации</Run></TextBlock>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding EndRegister}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock TextAlignment="Center"><Run>Конец</Run><LineBreak></LineBreak><Run>регистрации</Run></TextBlock>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Статус" IsReadOnly="False" Binding="{Binding Status}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

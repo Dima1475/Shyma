@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Administators">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Password" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Airlines">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Arrivals">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="int" />
+    <Property Name="id_Airline" Type="int" />
+    <Property Name="id_City" Type="int" />
+    <Property Name="Arrival" Type="datetime" />
+    <Property Name="ArrivalsHall" Type="int" />
+  </EntityType>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Departures">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="int" />
+    <Property Name="id_Airline" Type="int" />
+    <Property Name="id_City" Type="int" />
+    <Property Name="Departure" Type="datetime" />
+    <Property Name="Arrival" Type="datetime" />
+    <Property Name="StartRegister" Type="datetime" />
+    <Property Name="EndRegister" Type="datetime" />
+    <Property Name="Rack" Type="int" />
+    <Property Name="Output" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Dispatcher">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Password" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Arrivals_Airlines">
+    <End Role="Airlines" Type="Self.Airlines" Multiplicity="0..1" />
+    <End Role="Arrivals" Type="Self.Arrivals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Airlines">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Arrivals">
+        <PropertyRef Name="id_Airline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Arrivals_Cities">
+    <End Role="Cities" Type="Self.Cities" Multiplicity="0..1" />
+    <End Role="Arrivals" Type="Self.Arrivals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Arrivals">
+        <PropertyRef Name="id_City" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Departures_Airlines">
+    <End Role="Airlines" Type="Self.Airlines" Multiplicity="0..1" />
+    <End Role="Departures" Type="Self.Departures" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Airlines">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Departures">
+        <PropertyRef Name="id_Airline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Departures_Cities">
+    <End Role="Cities" Type="Self.Cities" Multiplicity="0..1" />
+    <End Role="Departures" Type="Self.Departures" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Departures">
+        <PropertyRef Name="id_City" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ModelContainer">
+    <EntitySet Name="Administators" EntityType="Self.Administators" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Airlines" EntityType="Self.Airlines" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Arrivals" EntityType="Self.Arrivals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departures" EntityType="Self.Departures" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dispatcher" EntityType="Self.Dispatcher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Arrivals_Airlines" Association="Self.FK_Arrivals_Airlines">
+      <End Role="Airlines" EntitySet="Airlines" />
+      <End Role="Arrivals" EntitySet="Arrivals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Arrivals_Cities" Association="Self.FK_Arrivals_Cities">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Arrivals" EntitySet="Arrivals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Departures_Airlines" Association="Self.FK_Departures_Airlines">
+      <End Role="Airlines" EntitySet="Airlines" />
+      <End Role="Departures" EntitySet="Departures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Departures_Cities" Association="Self.FK_Departures_Cities">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Departures" EntitySet="Departures" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

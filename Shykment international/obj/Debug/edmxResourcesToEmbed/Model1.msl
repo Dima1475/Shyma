@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Shykment_internationalEntities">
+    <EntitySetMapping Name="Administators">
+      <EntityTypeMapping TypeName="Model.Administators">
+        <MappingFragment StoreEntitySet="Administators">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Airlines">
+      <EntityTypeMapping TypeName="Model.Airlines">
+        <MappingFragment StoreEntitySet="Airlines">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Arrivals">
+      <EntityTypeMapping TypeName="Model.Arrivals">
+        <MappingFragment StoreEntitySet="Arrivals">
+          <ScalarProperty Name="ArrivalsHall" ColumnName="ArrivalsHall" />
+          <ScalarProperty Name="Arrival" ColumnName="Arrival" />
+          <ScalarProperty Name="id_City" ColumnName="id_City" />
+          <ScalarProperty Name="id_Airline" ColumnName="id_Airline" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="Model.Cities">
+        <MappingFragment StoreEntitySet="Cities">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departures">
+      <EntityTypeMapping TypeName="Model.Departures">
+        <MappingFragment StoreEntitySet="Departures">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Output" ColumnName="Output" />
+          <ScalarProperty Name="Rack" ColumnName="Rack" />
+          <ScalarProperty Name="EndRegister" ColumnName="EndRegister" />
+          <ScalarProperty Name="StartRegister" ColumnName="StartRegister" />
+          <ScalarProperty Name="Arrival" ColumnName="Arrival" />
+          <ScalarProperty Name="Departure" ColumnName="Departure" />
+          <ScalarProperty Name="id_City" ColumnName="id_City" />
+          <ScalarProperty Name="id_Airline" ColumnName="id_Airline" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dispatcher">
+      <EntityTypeMapping TypeName="Model.Dispatcher">
+        <MappingFragment StoreEntitySet="Dispatcher">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="Model.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,32 @@
+C:\Users\user\source\repos\Shykment international\Shykment international\bin\Debug\Shykment international.exe.config
+C:\Users\user\source\repos\Shykment international\Shykment international\bin\Debug\Shykment international.exe
+C:\Users\user\source\repos\Shykment international\Shykment international\bin\Debug\Shykment international.pdb
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Shykment international.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\App.g.cs
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Shykment international_MarkupCompile.cache
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Shykment international_MarkupCompile.lref
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Shykment international.g.resources
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Shykment_international.Properties.Resources.resources
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Shykment international.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Shykment international.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Shykment international.exe
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Shykment international.pdb
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Windows\MainWindow.baml
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Shykment international_Content.g.cs
+C:\Users\user\source\repos\Shykment international\Shykment international\bin\Debug\EntityFramework.dll
+C:\Users\user\source\repos\Shykment international\Shykment international\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\source\repos\Shykment international\Shykment international\bin\Debug\EntityFramework.xml
+C:\Users\user\source\repos\Shykment international\Shykment international\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\source\repos\Shykment international\Shykment international\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Shykment international.csproj.CopyComplete
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Page1.g.cs
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Pages\DeparturesTablePage.g.cs
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Page1.baml
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Pages\DeparturesTablePage.baml
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Pages\ArrivalTablePage.g.cs
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Pages\ArrivalTablePage.baml
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Autorize.g.cs
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Autorize.baml
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Pages\AllFilghtsPage.g.cs
+C:\Users\user\source\repos\Shykment international\Shykment international\obj\Debug\Pages\AllFilghtsPage.baml

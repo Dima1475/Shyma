@@ -1,0 +1,16 @@
+﻿<Window x:Class="Shykment_international.AdministratorAutorizeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shykment_international"
+        mc:Ignorable="d"
+        Title="AdministratorAutorizeWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Введите пароль" FontSize="20"></TextBlock>
+            <TextBox Name="txtPassword" Width="145" FontSize="20" Margin="0 10 0 0"></TextBox>
+            <Button Name="btnTryToLogin" Margin="0 10 0 0" FontSize="20" Content="Войти" Width="145" Click="btnTryToLogin_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
